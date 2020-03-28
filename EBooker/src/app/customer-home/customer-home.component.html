@@ -1,0 +1,54 @@
+<div class="background-wrap">
+    <div class="background"></div>
+  </div>
+  
+<div class="header">
+     <div class="logo-header">
+        <h1 class="site-name">Car Rental</h1>
+     </div>
+ </div>
+
+ <div class="content">
+     <div class="teaser">
+     </div>
+     <div class="arrow-down"></div>
+     <div class="reservation-form">
+            <div class="reservation-form-shadow">
+                <form id="reservationpannel" action="">
+                    <h1 id="litheader">EBooker</h1>
+                    <div class="inset">
+                <!-- <select 
+                        name="contactMethod" 
+                        id="contactMethod" 
+                        class="form-control"
+                        [(ngModel)]="contact.contactMethod">
+                        <option *ngFor="let method of contactMethods" [value]="method.id">{{ method.label }}</option>
+                    </select> -->
+                    <div class="styled-select-car">
+                        <select>
+                            <option value="apple">Apple</option>
+                            <option value="banana">Banana</option>
+                            <option value="orange">Orange</option>
+                            <option value="pear">Pear</option>
+                        </select>
+                    </div>
+                    <div class="location">
+                        <div class="input-group pick-up">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                Pick-up
+                            </span>
+                            <input type="text" name="pick-up-location" id="pick-up-location" class="form-control-autocomplete-location" placeholder="Enter a city or Airport" autocomplete="off">
+                        </div>
+                    </div>
+                    </div>
+                    <p class="p-container">
+                    <input class="btn float-right login_btn" type="submit" name="Login" id="go" value="Login" (click)="login()">
+                    </p>
+                </form>
+            </div>
+            </div>
+</div>
+<div class="footer">
+ </div>
+ 
