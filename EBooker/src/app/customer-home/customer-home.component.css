@@ -3,17 +3,24 @@
     
 }
   
+
 .header{
-    height:200px;
+    height: 200px;
     background: #fff;
+    position:fixed;
     width: 100%;
     top: 0;
     left: 0;
     box-sizing: border-box;
     z-index: 13;
     display: block;
-    padding: 0.2em;
+    padding: 0em;
     box-shadow: none;
+}
+@media (max-width: 992px){
+  .header{
+    height: 160px;
+  }
 }
 .logo-header{
     font-size: 12px;
@@ -38,17 +45,23 @@
     text-align: center;
     z-index: 11;
 }
+.content{
+  height:auto;
+  margin:200px auto;
 
+}
+
+@media (max-width: 992px){
+  .content{
+    margin:200px auto;
+  }
+}
 .teaser{
     height: 600px;
     width: 100%; 
     background-color: #ffbf00;
     background: linear-gradient(to bottom, #ffbf00 0%, #fcd45f 50%, #ffbf00 100%);
 }
-#teaser form {
-    padding: 20px 30px;
-}
-
 
 #teaser .reservation-form-shadow {
     height: 480px;
@@ -95,11 +108,12 @@ form {
     position: absolute;
     right: 0;
     top: 0;
-    height: 370px;
+    height: 500px;
     margin-top: auto;
     margin-bottom: auto;
-    width: 400px;
+    width: 450px;
     background-color: #fff !important;
+    padding: 20px 30px;
   }
 .styled-select-car {
     border: 2px solid #efe9e9;
@@ -133,7 +147,22 @@ form {
  .location {
     margin-bottom: 27px;
   }
+  .time {
+    width: 140px;
+}
 
+.pull-right {
+    float: right;
+}
+.pull-right {
+    float: right!important;
+}
+.pull-left {
+    float: left;
+}
+.pull-left {
+    float: left!important;
+}
   .input-group-addon {
     border-radius: 0;
     border: none;
@@ -167,10 +196,16 @@ form {
     margin: 0 2px 0 -2px;
   }
 
-  #teaser form .datetime {
+
+  .datetime {
     margin-bottom: 11px;
   }
 
+  #reservationpannel{
+  top: 25%;
+  left: 1%;
+  margin:33px;
+  }
 
   #teaser form .different-drop-off {
     color: #716d6e;
@@ -178,21 +213,25 @@ form {
     margin: 10px 0;
     display: block;
   }
-  #teaser form .date {
+
+  .date {
     width: 240px;
   }
-  #teaser form .time {
+.time {
     width: 140px;
   }
-  #teaser form .pixelfix {
+ 
+   .pixelfix {
     border-top: 1px solid #fff;
   }
-  #teaser form .styled-select-time {
+
+  .styled-select-time {
     border: 2px solid #efe9e9;
     height: 43px;
     position: relative;
   }
-  #teaser form .styled-select-time:after {
+  
+  .styled-select-time:after {
     content: '';
    /* background: #ffffff url('../img/dropdown-icon.png') no-repeat 5px 18px;*/
     right: 0px;
@@ -202,7 +241,7 @@ form {
     position: absolute;
     pointer-events: none;
   }
-  #teaser form .styled-select-time select {
+  .styled-select-time select {
     border: none;
     font-size: 16px;
     width: 100%;
@@ -213,7 +252,7 @@ form {
     height: 39px;
     color: #ffbf00;
   }
-  #teaser form .submit {
+  .submit {
     width: 100%;
     background-color: #ffbf00;
     color: #fff;
@@ -228,17 +267,17 @@ form {
     margin-top: 30px;
     transition: 0.2s;
   }
-  #teaser form .submit:hover {
+  .submit:hover {
     background-color: #716d6e;
   }
-  #teaser .title {
+.title {
     color: #fff;
     text-transform: uppercase;
     font-size: 36px;
     font-weight: 900;
     margin: 0;
   }
-  #teaser .subtitle {
+.subtitle {
     font-size: 24px;
     color: #716d6e;
     text-transform: none;
@@ -246,6 +285,64 @@ form {
     font-weight: normal;
     margin-top: 10px;
   }
+
+ .car-roulette{
+    margin:33px;
+    height:400px;
+    width:600px;
+    overflow:hidden;
+    }
+    .middle{
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .car-items{
+      width: 300%;
+      height:95%;
+      display: flex;
+    }
+    .car-item{
+      width: 50%;
+      transition: 0.6s;
+    }
+    .car-item img{
+      width: 100%;
+      height: 100%;
+    }
+    .navigation{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translatex(-50%);
+    }
+
+    .bar{
+      width: 50px;
+      height: 10px;
+      border: 2px solid #fff;
+      margin: 6px;
+      cursor: pointer;
+    }
+    .bar:hover{
+      background: #fff;
+    }
+    input[name="r"]{
+      position: absolute;
+      visibility: hidden;
+    }
+#r1:checked ~ .c1{
+  margin-left:0;
+}
+
+#r2:checked ~ .c1{
+  margin-left:-50%;
+}
+#r3:checked ~ .c1{
+  margin-left:-100%;
+}
+  
 
 
 

@@ -12,42 +12,104 @@
      <div class="teaser">
      </div>
      <div class="arrow-down"></div>
-     <div class="reservation-form">
-            <div class="reservation-form-shadow">
+     <div class="row">
+            <div class="reservation-form-shadow reservation-form pull-left">
                 <form id="reservationpannel" action="">
-                    <h1 id="litheader">EBooker</h1>
                     <div class="inset">
-                <!-- <select 
-                        name="contactMethod" 
-                        id="contactMethod" 
-                        class="form-control"
-                        [(ngModel)]="contact.contactMethod">
-                        <option *ngFor="let method of contactMethods" [value]="method.id">{{ method.label }}</option>
-                    </select> -->
                     <div class="styled-select-car">
                         <select>
-                            <option value="apple">Apple</option>
-                            <option value="banana">Banana</option>
-                            <option value="orange">Orange</option>
-                            <option value="pear">Pear</option>
+                            <option value>Select your car type</option>
+                            <option value="apple">Audi</option>
+                            <option value="banana">Volswagen</option>
+                            <option value="orange">Mercedes</option>
+                            <option value="pear">Ford</option>
                         </select>
                     </div>
-                    <div class="location">
-                        <div class="input-group pick-up">
+                   
+                    <div class="location pick-up">
+                        <div class="input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-map-marker"></span>
                                 Pick-up
                             </span>
-                            <input type="text" name="pick-up-location" id="pick-up-location" class="form-control-autocomplete-location" placeholder="Enter a city or Airport" autocomplete="off">
+                            <input type="text" name="pick-up-location" id="pick-up-location" class="form-control autocomplete-location" placeholder="Enter a city or Airport" autocomplete="off">
                         </div>
                     </div>
+
+                    <!-- Pick-up date/time start -->
+                    <div class="datetime pick-up">
+                        <div class="date pull-left">
+                            <div class="input-group">
+                                <span class="input-group-addon pixelfix">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    Pick-up
+                                </span>
+                                <input type="text" readonly="true" name="pick-up-date" id="pick-up-date" class="form-control datepicker" placeholder="mm/dd/yyyy">
+                            </div>
+                        </div>
+                        <!-- Pick-up date/time end -->
+                        <div class="time pull-right">
+                            <div class="styled-select-time">
+                                <select name="pick-up-time" id="pick-up-time">
+                                    <option value="12:00 AM">12:00 AM</option>
+                                    <option value="12:30 AM">12:30 AM</option>
+                                    <option value="13:00 AM">13:00 AM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Drop off date/time start-->
+                    <div class="datetime drop-off">
+                        <div class="date pull-left">
+                            <div class="input-group">
+                                <span class="input-group-addon pixelfix">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                    Drop-off
+                                </span>
+                                <input type="text" readonly="true" name="frop-off-date" id="drop-off-date" class="form-control datepicker" placeholder="mm/dd/yyyy">
+                            </div>
+                        </div>
+                        <!-- Drop-off date/time start -->
+                        <div class="time pull-right">
+                            <div class="styled-select-time">
+                                <select name="drop-off-time" id="drop-off-time">
+                                    <option value="12:00 AM">12:00 AM</option>
+                                    <option value="12:30 AM">12:30 AM</option>
+                                    <option value="13:00 AM">13:00 AM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                     </div>
                     <p class="p-container">
-                    <input class="btn float-right login_btn" type="submit" name="Login" id="go" value="Login" (click)="login()">
+                    <input class="submit" type="submit" name="CarReservation" id="go" value="Car Reservation" (click)="carReservation()">
                     </p>
                 </form>
             </div>
+            <div class="car-roulette middle">
+                <div class="car-items">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <div class="car-item c1">
+                        <img src="https://purepng.com/public/uploads/large/purepng.com-aston-martin-v8-vantage-n400-orange-carcarvehicletransportaston-martin-961524642896dm6cr.png" alt="">
+                    </div>
+                    <div class="car-item">
+                        <img src="../img/107589.png" alt="">
+                    </div>
+                    <div class="car-item">
+                        <img src="../img/122332.png" alt="">
+                    </div>
+                </div>
+                <div class=roulette-navigation>
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                </div>
             </div>
+        </div>
 </div>
 <div class="footer">
  </div>
